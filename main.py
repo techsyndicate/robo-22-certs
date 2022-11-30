@@ -72,23 +72,23 @@ def makePart(per):
 
     name = per["name"]
     font = ImageFont.truetype(
-        "Outfit-Medium.ttf",
+        "font.woff2",
         100
     )
-    txtSize = font.getsize(name)
-    nameX = (4960-txtSize[0])/2
+    txtSize = font.getlength(name)
+    nameX = (4960-txtSize)/2
     draw.text(
         (nameX, 982),
         name,
         fill='#1b1b1b',
         font=font)
 
-    schooltxtsize = font.getsize(per["school"])
+    schooltxtsize = font.getlength(per["school"])
     font = ImageFont.truetype(
-        "Outfit-Medium.ttf",
+        "font.woff2",
         100
     )
-    schoolX = (5050-schooltxtsize[0])/2
+    schoolX = (5100-schooltxtsize)/2
     draw.text(
         (schoolX, 1149),
         per["school"],
@@ -96,12 +96,12 @@ def makePart(per):
         font=font
     )
 
-    eventtxtsize = font.getsize(per["field"])
+    eventtxtsize = font.getlength(per["field"])
     font = ImageFont.truetype(
-        "Outfit-Medium.ttf",
+        "font.woff2",
         100
     )
-    EventX = (5650-eventtxtsize[0])/2
+    EventX = (5650-eventtxtsize)/2
     draw.text(
         (EventX, 1304),
         per["field"],
@@ -134,13 +134,13 @@ def generator():
             print("Error making Participation Certificate for:", i["name"])
         end = time.time()
         print("gen time", end-begin)
+        
         begin = time.time()
         try:
             sendMail(i["mail"], "Partake.png", i["name"])
         except Exception as e:
             print(e)
             print("Error Sending Mail to:", i["name"])
-
         end = time.time()
         print("send mail time", end-begin)
         os.remove("Partake.png")
