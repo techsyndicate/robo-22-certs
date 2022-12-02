@@ -13,11 +13,11 @@ import time
 
 data_location = ""
 cert_location = ""
-mail = True
+mail = False
 timer = False
 print("Started")
 sender = 'jainnimansh@gmail.com'
-password = 'wdfcrobslqkbkrsm'
+password = '***'
 
 session = smtplib.SMTP('smtp.gmail.com', 587)
 session.starttls()
