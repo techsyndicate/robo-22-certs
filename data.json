@@ -1,19 +1,19 @@
 {
     "data": [
       {
-        "name":"Aayush Garg",
+        "name":"Utkarsh Dugar is great",
+        "field":"Group Discussion",
+        "school": "Amity International School Sector 46",
+        "mail": "Aayushgarg2006@gmail.com"
+      },
+      {
+        "name":"Utkarsh Dugar",
         "field":"Programming",
         "school": "Amity International School",
         "mail": "Aayushgarg2006@gmail.com"
       },
       {
-        "name":"Aayush Garg is Great",
-        "field":"Group Discussion",
-        "school": "Amity  International School sector 46",
-        "mail": "Aayushgarg2006@gmail.com"
-      },
-      {
-        "name":"Garg",
+        "name":"Dugar",
         "field":"Quiz",
         "school": "Amity",
         "mail": "Aayushgarg2006@gmail.com"
